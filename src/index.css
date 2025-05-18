@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@theme {
+  --color-primary: #d4a373; /* Primary accent color */
+  --color-primary-dark: #8b5e3c; /* Darker shade of primary for hover or accents */
+  --color-background: #fff3e0; /* Light background/base color */
+  --color-dark: #5c4033; /* Dark text color for readability */
+}
