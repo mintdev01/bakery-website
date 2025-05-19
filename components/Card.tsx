@@ -1,3 +1,5 @@
+import React from "react";
+
 type Item = {
   name: string;
   description: string;
@@ -7,33 +9,27 @@ type Item = {
 type CardProp = {
   item: Item;
 };
+
 export default function Card({ item }: CardProp) {
   return (
-    <>
-      <div className="h-[90%] w-[32%] max-w-[20%] border-2 bg-background flex flex-col rounded-xl">
-        <div className=" h-[45%] flex justify-center items-center">
-          <div className="h-[90%] w-[90%] rounded-2xl  overflow-hidden">
-            <img
-              src={item.imageurl}
-              alt="image"
-              className="w-full h-full object-cover  translate-y-1.5 rounded-2xl"
-            />
-          </div>
-        </div>
-        <div className="h-[15%] flex-col flex justify-center items-center text-center">
-          <h1 className="text-primary-dark font-semibold text-sm">
-            {item.name}
-          </h1>
-        </div>
-        <div className="h-[15%] flex justify-center items-center text-center">
-          <h1 className="text-primary font-bold">{item.description}</h1>
-        </div>
-        <div className=" h-[25%] px-3 py-4 ">
-          <button className="bg-primary-dark font-semibold h-full w-full border-2 rounded-2xl">
-            order
-          </button>
-        </div>
+    <div className="border-2 bg-background rounded-xl overflow-hidden flex flex-col shadow-md">
+      <div className="w-full h-48 overflow-hidden">
+        <img
+          src={item.imageurl}
+          alt={item.name}
+          className="w-full h-full object-cover"
+        />
       </div>
-    </>
+
+      <div className="p-4 flex flex-col gap-2 flex-grow">
+        <h2 className="text-lg font-semibold text-primary-dark text-center">
+          {item.name}
+        </h2>
+        <p className="text-sm text-primary text-center">{item.description}</p>
+        <button className="mt-auto bg-primary-dark text-white font-semibold py-2 px-4 rounded-xl border-2 hover:bg-primary-dark/90 transition">
+          Order
+        </button>
+      </div>
+    </div>
   );
 }
