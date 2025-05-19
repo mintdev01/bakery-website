@@ -14,8 +14,14 @@ const item2 = {
 
 const item3 = {
   name: "normal bread",
-  description: "Flaky.",
+  description: "delecious",
   imageurl: "/bread3.jpg",
+};
+
+const item4 = {
+  name: "baguette",
+  description: "delecious and flaky",
+  imageurl: "/bread4.jpg",
 };
 
 export default function Menu() {
@@ -31,6 +37,7 @@ export default function Menu() {
         <Card item={item1} />
         <Card item={item2} />
         <Card item={item3} />
+        <Card item={item4} />
       </div>
     </section>
   );
