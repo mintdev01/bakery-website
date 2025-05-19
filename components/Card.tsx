@@ -1,5 +1,3 @@
-import React from "react";
-
 type Item = {
   name: string;
   description: string;
